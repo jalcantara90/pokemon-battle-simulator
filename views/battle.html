@@ -1,9 +1,10 @@
-<div class="">
+<div class="" ng-show="visible === false">
 <input  ng-model="searchPokemon" type="text" placeholder="Buscar" />
   <ul>
     <li class="{{pokemon.tipo}}" ng-repeat="pokemon in pokemon | filter : searchPokemon | orderBy : 'nombre' " >
-      <span><img ng-src="{{'./assets/img/pokemons/'+pokemon.nombre +'.jpg'}}" alt=""></span>
+      <span><img ng-src="{{'./assets/img/pokemons/'+pokemon.nombre +'.jpg'}}" alt=""></img></span>
       {{pokemon.nombre}} <small>{{pokemon.tipo}}</small>
     </li>
   </ul>
 </div>
+  <button type="button" class="button" ng-click="toogleTabs()" name="button"> Botón </button>

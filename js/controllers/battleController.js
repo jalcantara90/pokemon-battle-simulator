@@ -8,4 +8,11 @@ pokeBattle.controller('battleCtrl',['$scope', function ($scope) {
         {"nombre": 'bulbasaur',
           "tipo": 'Planta'}];
 
+      $scope.visible = true;
+
+      $scope.toogleTabs = function (){
+          $scope.visible = !$scope.visible;
+
+      }
+
 }])
