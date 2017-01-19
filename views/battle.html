@@ -1,3 +1,9 @@
 <div class="">
-    {{pokemon}}
+<input  ng-model="searchPokemon" type="text" placeholder="Buscar" />
+  <ul>
+    <li class="{{pokemon.tipo}}" ng-repeat="pokemon in pokemon | filter : searchPokemon | orderBy : 'nombre' " >
+      <span><img ng-src="{{'./assets/img/pokemons/'+pokemon.nombre +'.jpg'}}" alt=""></span>
+      {{pokemon.nombre}} <small>{{pokemon.tipo}}</small>
+    </li>
+  </ul>
 </div>
